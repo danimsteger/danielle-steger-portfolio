@@ -1,0 +1,109 @@
+
+:root {
+    --color1: #D1C3D2;
+    --color2: #362936;
+    --color3: #CEDEE5;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: var(--color2);
+}
+
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+header {
+    background-color: var(--color2);
+    color: var(--color1);
+    padding: 4rem;
+    display: grid;
+}
+h1 {
+   
+    text-align: center;
+    font-size: 3rem;
+}
+nav {
+    padding-top: 1rem;
+    float: center;
+    font-size: 1.5rem;
+    list-style-type: none;
+}
+
+ul {
+    
+    flex: auto;
+}
+
+li {
+    display: inline;
+    width: 30%;
+    border: dashed;
+    border-color: var(--color3);
+    padding: 2rem;
+
+}
+
+footer {
+    background-color: var(--color2);
+    color: var(--color1);
+    text-align: center;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.column {
+    float:left;
+    padding: 1rem;
+}
+
+.column.mid {
+    width: 70%;
+    background-color: var(--color1);
+    
+}
+
+.about, .work, .contact {
+    background-color: var(--color1);
+    color: yellow;
+    height: 600px;
+}
+
+.column.side {
+    width: 15%;
+    background-color: var(--color2);
+    color: var(--color1);
+    height: 600px;
+}
+
+.row::after {
+    content:"";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width: 600px) {
+    .column.side {
+        display: none;
+    }
+    
+    .column.mid {
+        width: 100%;
+    }
+}
+
+
+/*
+@media screen and (max-width: 992px) {
+    .main-header {
+        text-align: center;
+        color: pink;
+    }
+    .main-nav {
+        float: center;
+        color: pink;
+    }
+}*/
+
