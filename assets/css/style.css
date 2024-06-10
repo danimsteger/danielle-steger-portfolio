@@ -10,11 +10,11 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: var(--color2);
 }
 
 body {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
 }
 header {
     background-color: var(--color2);
@@ -66,10 +66,10 @@ footer {
 }
 
 .column.mid {
-    width: 70%;   
+    width: 70%;  
 }
 
-.mid-header, .mid-p {
+.mid-header, .mid-p, .card.row {
     background-color: var(--color1);
 }
 
@@ -91,7 +91,7 @@ footer {
     width: 15%;
     background-color: var(--color2);
     color: var(--color1);
-    height: 600px;
+    height: 1500px;
 }
 
 .contact-links {
@@ -175,6 +175,7 @@ a {
 .work-column-2 {
     display: flex;
     flex-wrap: wrap;
+    align-items: space-evenly;
     width: 50%;
 }
 
@@ -183,12 +184,17 @@ a {
     display: table;
     clear: both;
 }
+.card.first {
+    background-color: var(--color3);
+}
 .card.row {
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    width: 45%;
     padding: 10px;
     height: auto;
+    margin: 10px;
+    background-color: var(--color3);
 }
 
 .card img {
