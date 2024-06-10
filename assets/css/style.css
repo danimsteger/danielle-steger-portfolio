@@ -62,6 +62,25 @@ footer {
     padding: 2rem;
 }
 
+.photo {
+    float: left;
+    margin: 5px;
+}
+
+#photo-of-me {
+    width: 250px;
+    border: solid 5px;
+    border-color: var(--color2);
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px var(--color2);
+    float: left;
+    margin-right: 30px;
+    padding: 10px;
+    background-color: var(--color3);
+}
+
+
+
 .column {
     float:left;
     padding: 1rem;
@@ -69,7 +88,7 @@ footer {
 }
 
 .column.mid {
-    width: 70%;  
+    width: 70%;
 }
 
 .mid-header, .mid-p, .card.row {
@@ -81,13 +100,17 @@ footer {
     text-align: center;
     font-size: 2rem;
     padding: 30px 0px 20px 0px;
-    margin: 30px 0px 20px 0px;
-    
+    margin: 30px 0px 20px 0px; 
+    border: solid 5px;
+
 }
 
 .mid-p {
     color: var(--color2);
     font-size: 1.5rem;
+    margin: 20px;
+    text-wrap: pretty;
+    
 }
 
 .column.side {
