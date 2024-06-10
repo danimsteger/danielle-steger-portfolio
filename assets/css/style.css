@@ -38,6 +38,10 @@ ul {
     flex: auto;
 }
 
+main {
+    background-color: var(--color1);
+}
+
 .nav-link {
     display: inline;
     width: 30%;
@@ -62,14 +66,7 @@ footer {
 }
 
 .column.mid {
-    width: 70%;
-    
-}
-
-.about, .work, .contact {
-    background-color: var(--color1);
-    color: yellow;
-    height: 600px;
+    width: 70%;   
 }
 
 .mid-header, .mid-p {
@@ -80,6 +77,9 @@ footer {
     color: var(--color4);
     text-align: center;
     font-size: 2rem;
+    padding: 30px 0px 20px 0px;
+    margin: 30px 0px 20px 0px;
+    
 }
 
 .mid-p {
@@ -120,6 +120,10 @@ a {
     border-style: dashed;
     width: 30%;
     margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
 }
 
 
@@ -138,42 +142,87 @@ a {
     }
 }
 
-/* css for the work cards */
 
+/*columns for cards*/
 .sample-work {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
     width: 90%;
-    height: 100vh;
+    height: auto;
     margin: 0 auto;
 }
 
+.work-column-1, .work-column-2 {
+    float: left;
+    width: 50%;
+    padding:5px;
+    margin: auto;
+}
 .card {
     padding: 10px;
-    width: 30%;
     text-align: center;
     border-style: solid;
     border-width: 2px;
+    justify-content: center;
+    align-items: center;
 }
-.card.first {
-    width: 60%;
+/* css for the work cards 
+*/
+
+.work-column-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.work-column-2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.sample-work::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.card.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding: 10px;
+    height: auto;
+}
+
+.card img {
+    width: 100%;
+}
+
 .card h3 {
-    padding: 20px;
+    padding: 15px;
     background: orange;
     color: green;
 }
 
-.card img {
-    width: 100%
+@media screen and (max-width: 600px) {
+    .work-column-1 {
+        width: 100%;
+    }
+    .work-column-2 {
+        width: 100%;
+    }
 }
+
+/*
+.card {
+    padding: 10px;
+    width: 25%%;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+}
+
 
 .card.row {
     display: flex;
-    flex-direction: row;
+    
 }
 
 .card.column {
@@ -182,6 +231,7 @@ a {
 }
 
 
+}
 /*
 @media screen and (max-width: 992px) {
     .main-header {
