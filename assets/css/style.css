@@ -64,7 +64,7 @@ main {
     border-color: var(--color3);
     border-radius: 10px;
     padding: 0.5rem;
-    margin-top: 30px;
+    margin-top: 3rem;
     background-color: var(--color1);
 }
 
@@ -94,7 +94,7 @@ footer {
 
 .photo {
     float: left;
-    margin: 5px;
+    margin: 0.5px;
 }
 
 #photo-of-me {
@@ -104,7 +104,7 @@ footer {
     border-radius: 10px;
     box-shadow: 10px 10px 5px var(--color2);
     float: left;
-    margin-right: 30px;
+    margin-right: 3rem;
     padding: 10px;
     background-color: var(--color3);
 }
@@ -118,7 +118,7 @@ footer {
 }
 
 .column.mid {
-    width: 70%;
+    width: 80%;
     border: solid 8px var(--color3);
     border-radius: 50px;
     background-color: var(--color1);
@@ -143,11 +143,10 @@ footer {
     font-size: 1.5rem;
     margin: 20px;
     text-wrap: pretty;
-    
 }
 
 .column.side {
-    width: 15%;
+    width: 10%;
     height: 1800px;
 }
 
@@ -164,10 +163,15 @@ footer {
     margin-top: 100px;
 }
 
+#contact {
+    padding-top: 550px;
+}
+
 .contact-items {
     display: flex;
     justify-content: center;
-    flex: 0 1 30%; 
+    flex-wrap: wrap;
+    /*flex: 0 1 30%; */
     text-decoration: none;
     text-align: center;
     padding: 2rem;
@@ -209,7 +213,7 @@ footer {
     display: table;
     clear: both;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1083px) {
     .column.side {
         display: none;
     }
@@ -225,66 +229,66 @@ footer {
     width: 100%;
     height: auto;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
 }
 
 .work-column-1, .work-column-2 {
     float: left;
     width: 50%;
-    padding:5px;
+    padding: 5px;
     margin: auto;
 }
-.card {
-    padding: 10px;
-    text-align: center;
-    border-style: solid;
-    border-width: 2px;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 10px 10px 5px var(--color2);
-}
-/* css for the work cards 
-*/
 
-.work-column-1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .work-column-2 {
     display: flex;
     flex-wrap: wrap;
     align-items: space-evenly;
-    width: 50%;
 }
 
-.sample-work::after {
-    content: "";
-    display: table;
-    clear: both;
+
+.card {
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    border: solid 3px var(--color2);
+    align-items: center; 
+    box-shadow: 10px 10px 5px var(--color2);
 }
+
 .card.first, .card.row {
     background-color: var(--color3);
-    border: solid;
-    border-color: var(--color2);
+    border: solid 3px var(--color2);
     border-radius: 10px;
 }
+
+@media screen and (max-width: 867px) {
+    .work-column-1, .work-column-2 {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
 .card.row {
     display: flex;
     flex-wrap: wrap;
     width: 45%;
-    padding: 10px;
-    height: 50%;
+    padding: 5px;
     margin: 10px;
+}
 
+@media screen and (max-width: 867px) {
+    .work-column-1, .work-column-2 {
+        width: 100%;
+        justify-content: center;
+    }
+    .card.row {
+        width: 60%;
+    }
 }
 
 .card img {
     width: 100%;
-    border: solid;
+    border: solid 3px var(--color2);
     border-radius: 10px;
-    border-color: var(--color2);
 }
 
 .card header {
@@ -309,6 +313,7 @@ footer {
 
 .card:hover {
     background-color: var(--color1);
+    box-shadow: inset 0px 0px 20px var(--color3), 0 0 15px var(--color3);
 }
 
 .card:hover header{
@@ -323,14 +328,33 @@ footer {
 }
 
 
-@media screen and (max-width: 600px) {
-    .work-column-1 {
-        width: 100%;
-    }
-    .work-column-2 {
-        width: 100%;
-    }
-}
+/* css for the work cards 
+*/
+
+/*
+.work-column-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+
+
+
+
+
+/*
+.card.row {
+    
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    padding: 10px;
+    height: 50%;
+    margin: 10px;
+
+}*/
+
 
 /* sidebar image*/
 
