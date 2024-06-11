@@ -105,6 +105,7 @@ footer {
     box-shadow: 10px 10px 5px var(--color2);
     float: left;
     margin-right: 3rem;
+    margin-bottom: 1.5rem;
     padding: 10px;
     background-color: var(--color3);
 }
@@ -140,7 +141,7 @@ footer {
 
 .mid-p {
     color: var(--color2);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 20px;
     text-wrap: pretty;
 }
