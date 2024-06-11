@@ -13,16 +13,21 @@
     margin: 0;
 }
 
-/* Element Selectos */
+/* General Selectors */
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
+
+    /* Creates background color 2 behind and in-between all other sections */
+    background-color: var(--color2);
 }
+
+/* Header */
 header {
     color: var(--color1);
     padding: 4rem;
     display: grid;
     background-color: var(--color2);
-  
+
 }
 h1 {
     text-align: center;
@@ -30,32 +35,12 @@ h1 {
     text-shadow: 5px 5px 5px var(--color3);
 }
 
+    /* Navigation Bar */
 nav {
     padding-top: 1rem;
     float: center;
     font-size: 1.5rem;
     list-style-type: none;
-}
-
-ul { 
-    flex: auto;
-}
-
-main {
-    background-color: var(--color2);
-}
-
-nav a {
-    color: var(--color2);
-    text-decoration: none;
-}
-
-footer {
-    background-color: var(--color2);
-    color: var(--color1);
-    text-align: center;
-    padding: 6rem;
-    font-size: 1.5rem;
 }
 
 .main-nav {
@@ -73,20 +58,48 @@ footer {
     margin-top: 3rem;
     background-color: var(--color1);
 }
-
-.column {
-    float:left;
-    padding: 1rem;
-    background-color: transparent;
+/* Navigation links and boxes change colors and give shadow when you hover over them */
+.nav-link:hover {
+    background-color: var(--color3);
+    border: solid 5px;
+    border-color: var(--color1);
+    box-shadow: inset 0px 0px 20px var(--color1), 0 0 15px var(--color1);
 }
 
+.nav-link:hover a {
+    color: var(--color1);
+}
+
+nav a {
+    color: var(--color2);
+    text-decoration: none;
+}
+
+/* Main Section */
+.column {
+    float:left;
+    padding: 0.5rem;
+    background-color: var(--color2);
+}
+
+/* Clears floated elements and allows the footer to be appropriately spaced away from main section */
+.row::after {
+    content:"";
+    display: table;
+    clear: both;
+} 
+
+/* Created 3 column layout to include images on the sides of the main page content when in a large display.*/
+
+
+    /* Middle Column */
 .column.mid {
     width: 80%;
     border: solid 8px var(--color3);
     border-radius: 50px;
     background-color: var(--color1);
+    position: relative;
 }
-
 
 .mid-header, .mid-p, .card.row {
     background-color: var(--color1);
@@ -105,31 +118,16 @@ footer {
     color: var(--color2);
     font-size: 1.2rem;
     margin: 20px;
-    text-wrap: pretty;
 }
 
-.column.side {
-    width: 10%;
-    height: 1800px;
-    background-image: url("./left.png");
+#contact, #work {
+    margin-top: 100px;
 }
 
-.nav-link:hover {
-    background-color: var(--color3);
-    border: solid 5px;
-    border-color: var(--color1);
-    box-shadow: inset 0px 0px 20px var(--color1), 0 0 15px var(--color1);
-}
-
-.nav-link:hover a {
-    color: var(--color1);
-}
-
-
-#photo-of-me {
+        /* "About" Section */
+ #photo-of-me {
     width: 250px;
-    border: solid 5px;
-    border-color: var(--color2);
+    border: solid 5px var(--color2);
     border-radius: 10px;
     box-shadow: 10px 10px 5px var(--color2);
     float: left;
@@ -138,92 +136,12 @@ footer {
     padding: 10px;
     background-color: var(--color3);
     float: left;
-    
 }
 
-/*p formatting for work section*/
-#work-directions {
-    text-align: center;
-    color: var(--color2);
-    margin-bottom: 2rem;
-    font-size: 1rem;
-}
-
-
-
-
-
-
-#contact, #work {
-    margin-top: 100px;
-}
-
-#contact {
-    padding-top: 550px;
-}
-
-.contact-items {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    /*flex: 0 1 30%; */
-    text-decoration: none;
-    text-align: center;
-    padding: 2rem;
-    background-color: var(--color1);
-    font-size: 2rem;
-}
-.contact-links {
-    padding: 1rem;
-    border: solid 5px;
-    border-color: var(--color2);
-    border-radius: 10px;
-    width: 150px;
-    margin: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color3);
-    
-}
-.contact-links a {
-    color: var(--color1);
-    text-decoration: none;
-}
-
-.contact-links:hover {
-    background-color: var(--color1);
-    border: solid 5px;
-    border-color: var(--color3);
-    box-shadow: inset 0px 0px 10px var(--color2), 0 0 10px var(--color2);
-}
-.contact-links:hover a{
-    color: var(--color3);
-}
-
-
-
-.row::after {
-    content:"";
-    display: table;
-    clear: both;
-}
-@media screen and (max-width: 1083px) {
-    .column.side {
-        display: none;
-    }
-    
-    .column.mid {
-        width: 100%;
-    }
-}
-
-
-/*columns for cards*/
+        /* "Work" Section  */
 .sample-work {
     width: 100%;
     height: auto;
-    margin: 0 auto;
 }
 
 .work-column-1, .work-column-2 {
@@ -231,15 +149,23 @@ footer {
     width: 50%;
     padding: 3px;
     margin: auto;
+    margin-bottom: 6rem;
 }
-
+/* Project images are flex and wrap so that they move naturally as the browser window changes */
 .work-column-2 {
     display: flex;
     flex-wrap: wrap;
     align-items: space-evenly;
 }
 
+.work-column-2 h3 {
+    font-size: 1rem;
+}
 
+.work-column-2 p {
+    font-size: 0.8rem;
+}
+        /* Project Cards */
 .card {
     padding: 10px;
     text-align: center;
@@ -247,19 +173,9 @@ footer {
     border: solid 5px var(--color2);
     align-items: center; 
     box-shadow: 10px 10px 5px var(--color2);
-}
-
-.card.first, .card.row {
     background-color: var(--color3);
     border: solid 3px var(--color2);
     border-radius: 10px;
-}
-
-@media screen and (max-width: 867px) {
-    .work-column-1, .work-column-2 {
-        width: 100%;
-        justify-content: center;
-    }
 }
 
 .card.row {
@@ -268,23 +184,8 @@ footer {
     width: 45%;
     padding: 5px;
     margin: 10px;
-}
-
-@media screen and (max-width: 800px) {
-    .work-column-1, .work-column-2 {
-        width: 100%;
-        justify-content: center;
-    }
-    .card.row {
-        width: 60%;
-    }
-}
-
-.card img {
-    width: 100%;
-    /*border: solid 4px var(--color2);*/
-    border-radius: 10px;
-}
+    background-color: var(--color3);
+} 
 
 .card header {
     display: flex;
@@ -297,22 +198,30 @@ footer {
     border-color: var(--color2);
     border-radius: 10px;
     width: 98%;
-
-}
-.card h3 {
-    font-size: 1.5rem;
-}
-.work-column-2 h3 {
-    font-size: 0.8rem;
 }
 
-.work-column-2 p {
-    font-size: 0.6rem;
-}
-.card a{
+.card a {
     text-decoration: none;
     color: var(--color2);
 }
+
+.card p {
+    line-height: 15px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#work-directions {
+    text-align: center;
+    color: var(--color2);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+/* Project card backgrounds change colors and give shadow when you hover over them */
 
 .card:hover {
     background-color: var(--color1);
@@ -326,73 +235,87 @@ footer {
 .card:hover img{
     box-shadow: inset 0px 0px 20px var(--color1), 0 0 15px var(--color3);
 }
-.card p {
-    line-height: 15px;
+
+        /* "Contact" Section Styling */
+
+/* Contact Items are centered and wrapped as the browser window size changes */
+.contact-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
 }
 
-
-/* css for the work cards 
-*/
-
-/*
-.work-column-1 {
+.contact-links {
+    padding: 1rem;
+    border: solid 5px;
+    border-color: var(--color2);
+    border-radius: 10px;
+    width: 150px;
+    margin: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-}*/
+    background-color: var(--color3);
+} 
 
+.contact-links a {
+    color: var(--color1);
+    text-decoration: none;
+}
 
+/* Contact links change colors and give shadow when you hover over them */
 
+.contact-links:hover {
+    background-color: var(--color1);
+    border: solid 5px;
+    border-color: var(--color3);
+    box-shadow: inset 0px 0px 10px var(--color2), 0 0 10px var(--color2);
+}
 
+.contact-links:hover a{
+    color: var(--color3);
+}
 
+/* Puts the two images with the swiggle lines on the side of the main column.  The images have the same color of the body background to give a seamless effect */
 
-/*
-.card.row {
-    
-    display: flex;
-    flex-wrap: wrap;
-    width: 45%;
-    padding: 10px;
-    height: 50%;
-    margin: 10px;
+  /* Side Columns Styling */
+  .column.side {
+    width: 10%;
+    height: 1800px;
+    background-image: url("./left.png");
+}
 
-}*/
-
-
-/* sidebar image*/
-
-
-/*
-.card {
-    padding: 10px;
-    width: 25%%;
+/* Footer Styling */
+footer {
+    background-color: var(--color2);
+    color: var(--color1);
     text-align: center;
-    border-style: solid;
-    border-width: 2px;
+    padding: 10rem;
+    font-size: 1.5rem;
 }
 
+/* Side columns go away when less than 1083px and the middle column is the only column visible */
 
-.card.row {
-    display: flex;
+@media screen and (max-width: 1083px) {
+    .column.side {
+        display: none;
+    }
     
-}
-
-.card.column {
-    display: flex;
-    flex-direction: column;
-}
-
-
-}
-/*
-@media screen and (max-width: 992px) {
-    .main-header {
-        text-align: center;
-        color: pink;
+    .column.mid {
+        width: 100%;
     }
-    .main-nav {
-        float: center;
-        color: pink;
-    }
-}*/
+}
 
+/* The 4 smaller project cards are moved below the first card when the screen is smaller than 890 px*/
+@media screen and (max-width: 890px) {
+    .work-column-1, .work-column-2 {
+        width: 100%;
+        justify-content: center;
+    }
+    .card.row {
+        width: 60%;
+    }
+}
