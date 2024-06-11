@@ -1,9 +1,9 @@
 /* Variables */
 :root {
-    --color1: #D1C3D2;
-    --color2: #362936;
-    --color3: #CEDEE5;
-    --color4: #224F62;
+    --color1: #f6f8f7;
+    --color2: #a2b7b0;
+    --color3: #bacec8;
+    --color4: #afcecc;
 }
 
 /* Universal Selector */
@@ -11,22 +11,27 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+
 }
 
 /* Element Selectos */
 body {
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-   
+    font-family: Georgia, 'Times New Roman', Times, serif
+    
+
 }
 header {
-    background-color: var(--color2);
     color: var(--color1);
     padding: 4rem;
     display: grid;
+    background-color: var(--color2);
+  
 }
 h1 {
     text-align: center;
     font-size: 4rem;
+    text-shadow: 5px 5px 5px var(--color3);
+    
 }
 
 nav {
@@ -41,34 +46,49 @@ ul {
 }
 
 main {
-    background-color: var(--color1);
+    background-color: var(--color2);
+
 }
 
 .main-nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
+   
     text-align: center;
 }
 .nav-link {
     display: inline;
-    width: 20%;
-    border: dashed;
+    width: 150px;
+    border: solid 5px;
     border-color: var(--color3);
+    border-radius: 10px;
     padding: 0.5rem;
     margin-top: 30px;
-
+    background-color: var(--color1);
 }
+
 nav a {
-    color: var(--color3);
+    color: var(--color2);
     text-decoration: none;
 }
+.nav-link:hover {
+    background-color: var(--color3);
+    border: solid 5px;
+    border-color: var(--color1);
+    box-shadow: inset 0px 0px 20px var(--color1), 0 0 15px var(--color1);
+}
+
+.nav-link:hover a {
+    color: var(--color1);
+}
+
 footer {
     background-color: var(--color2);
     color: var(--color1);
     text-align: center;
-    margin: 2rem;
     padding: 2rem;
+    font-size: 1.5rem;
 }
 
 
@@ -94,11 +114,15 @@ footer {
 .column {
     float:left;
     padding: 1rem;
-    background-color: var(--color1);
+    background-color: transparent;
 }
 
 .column.mid {
     width: 70%;
+    border: solid 8px var(--color3);
+    border-radius: 50px;
+    background-color: var(--color1);
+
 }
 
 .mid-header, .mid-p, .card.row {
@@ -106,15 +130,12 @@ footer {
 }
 
 .mid-header {
-    color: var(--color4);
+    color: var(--color2);
     text-align: center;
     font-size: 3rem;
     padding: 30px 0px 20px 0px;
     margin: 30px 0px 20px 0px; 
-    text-decoration: underline;
-    text-decoration-style: wavy;
-  
-
+    text-shadow: 3px 5px 5px var(--color3);
 }
 
 .mid-p {
@@ -127,21 +148,26 @@ footer {
 
 .column.side {
     width: 15%;
-    background-color: var(--color2);
-    color: var(--color1);
-    height: 1500px;
+    height: 1800px;
 }
 
-.contact-links {
-    background-color: var(--color4);
-    color: var(--color3);
+.column.side {
+    background-image: url("./left.png");
+}
 
+.column.side {
+    background-image: url("./left.png");
+}
+
+
+#contact, #work {
+    margin-top: 100px;
 }
 
 .contact-items {
     display: flex;
     justify-content: center;
-    flex: 0 1 30%;
+    flex: 0 1 30%; 
     text-decoration: none;
     text-align: center;
     padding: 2rem;
@@ -150,18 +176,33 @@ footer {
 }
 .contact-links {
     padding: 1rem;
-    border-color: var(--color1);
-    border-style: dashed;
-    width: 30%;
+    border: solid 5px;
+    border-color: var(--color2);
+    border-radius: 10px;
+    width: 150px;
     margin: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--color3);
+    
 }
 .contact-links a {
-    color: var(--color3);
-    text-decoration: underline dotted;
+    color: var(--color1);
+    text-decoration: none;
 }
+
+.contact-links:hover {
+    background-color: var(--color1);
+    border: solid 5px;
+    border-color: var(--color3);
+    box-shadow: inset 0px 0px 10px var(--color2), 0 0 10px var(--color2);
+}
+.contact-links:hover a{
+    color: var(--color3);
+}
+
+
 
 .row::after {
     content:"";
@@ -184,6 +225,8 @@ footer {
     width: 100%;
     height: auto;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 .work-column-1, .work-column-2 {
@@ -246,15 +289,34 @@ footer {
 
 .card header {
     padding: 10px;
-    line-height: 20px;
-    background: var(--color2);
-    color: var(--color1);
+    line-height: 25px;
+    background: var(--color1);
+    color: var(--color2);
     border: solid;
-    border-color: var(--color1);
+    border-color: var(--color2);
     border-radius: 10px;
 }
 .card h3 {
     font-size: 1.5rem;
+}
+.work-column-2 h3 {
+    font-size: 1rem;
+}
+
+.work-column-2 p {
+    font-size: 0.8rem;
+}
+
+.card:hover {
+    background-color: var(--color1);
+}
+
+.card:hover header{
+    box-shadow: inset 0px 0px 20px var(--color3), 0 0 15px var(--color3);
+}
+
+.card:hover img{
+    box-shadow: inset 0px 0px 20px var(--color3), 0 0 15px var(--color3);
 }
 .card p {
     line-height: 15px;
@@ -269,6 +331,9 @@ footer {
         width: 100%;
     }
 }
+
+/* sidebar image*/
+
 
 /*
 .card {
