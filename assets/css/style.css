@@ -320,8 +320,8 @@ footer {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
     .mid-p {
-        margin: 30px;
+        margin: 75px;
     }
 }
