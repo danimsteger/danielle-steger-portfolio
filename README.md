@@ -14,11 +14,11 @@ To view the code of this project, you can clone this repository using the follow
 
 ### Clone this repository
 ~~~
-git clone git@github.com:danimsteger/horiseon-accessibility.git
+git clone git@github.com:danimsteger/danielle-steger-portfolio.git
 ~~~
 ### Go into this repository
 ~~~
-cd horiseon-accessibility
+cd danielle-steger-portfolio
 ~~~
 ### Access code of the repository
 ~~~
